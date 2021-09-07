@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+
+  ipponexporter:
+    image: imalkav/ipponexporter:latest
+    container_name: ipponexporter
+    hostname: ipponexporter
+    volumes: 
+      - ./ipponexporter/conf.yml:/ipponexporter/conf.yml
+    ports:
+      - "9096:9096"
+    restart: unless-stopped
+    labels:
+      org.label-schema.group: "monitoring"

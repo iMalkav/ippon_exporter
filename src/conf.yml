@@ -1,0 +1,4 @@
+global:
+   serverurl: https://ipponagenturl:8888/
+   log_level: INFO
+   port: 9096
